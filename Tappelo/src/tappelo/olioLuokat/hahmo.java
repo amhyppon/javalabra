@@ -26,15 +26,15 @@ public class hahmo {
         this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys + this.hahmonHaarniska.getHaarniskanKestavyys;
     }
 
-    public String getNimi() {
+    public String getHahmonNimi() {
         return this.hahmonNimi;
     }
 
-    public int getKetteryys() {
+    public int getHahmonKetteryys() {
         return this.hahmonKetteryys;
     }
 
-    public int getKestavyys() {
+    public int getHahmonKestavyys() {
         return this.hahmonKestavyys;
     }
 
@@ -42,23 +42,25 @@ public class hahmo {
         this.hahmonKestavyys = this.hahmonKestavyys - i;
     }
 
-    public String getRotu() {
-        return this.hahmonRotu.rodunNimi;
+    public String getHahmonRotu() {
+        return this.hahmonRotu.getRodunNimi;
     }
 
-    public String getAse() {
-        return this.hahmonAse.aseenNimi;
+    public String getHahmonAse() {
+        return this.hahmonAse.getAseenNimi;
     }
 
-    public void setAse(ase uusiAse) {
+    public void setHahmonAse(ase uusiAse) {
         this.hahmonAse = uusiAse;
     }
 
-    public String getHaarniska() {
-        return this.hahmonHaarniska.haarniskanNimi;
+    public String getHahmonHaarniska() {
+        return this.hahmonHaarniska.getHaarniskanNimi;
     }
 
-    public void setHaarniska(haarniska uusiHaarniska) {
+    public void setHahmonHaarniska(haarniska uusiHaarniska) {
         this.hahmonHaarniska = uusiHaarniska;
+        this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys + this.hahmonHaarniska.getHaarniskanKetteryys;
+        this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys + this.hahmonHaarniska.getHaarniskanKestavyys;
     }
 }

@@ -13,6 +13,12 @@ public class rotu {
     private int rodunKetteryys;
     private int rodunKestavyys;
     
+    public rotu(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
+        this.rodunNimi = annettuNimi;
+        this.rodunKetteryys = annettuKetteryys;
+        this.rodunKestavyys = annettuKestavyys;
+    }
+    
     public String getRodunNimi(){
         return this.rodunNimi;
     }

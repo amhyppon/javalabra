@@ -9,14 +9,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+import logiikka.noppa;
 /**
  *
  * @author Hyppönen
  */
-public class tappeloJUnitTest {
+public class noppaJUnitTest {
     
-    public tappeloJUnitTest() {
+    public noppaJUnitTest() {
     }
     
     @BeforeClass
@@ -34,7 +34,10 @@ public class tappeloJUnitTest {
     @After
     public void tearDown() {
     }
-
+    
     @Test
-    public void hello() {}
+    public void toimiikoNoppa() {
+          
+        System.out.println(noppa.heitaNoppaa(20));
+    }
 }

@@ -9,20 +9,26 @@ package tappelo.olioLuokat;
  * @author Hyppönen
  */
 public class haarniska {
+
     private String haarniskanNimi;
     private int haarniskanKetteryys;
     private int haarniskanKestavyys;
-    
-     public String getHaarniskanNimi(){
+
+    public haarniska(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
+        this.haarniskanNimi = annettuNimi;
+        this.haarniskanKetteryys = annettuKetteryys;
+        this.haarniskanKestavyys = annettuKestavyys;
+    }
+
+    public String getHaarniskanNimi() {
         return this.haarniskanNimi;
     }
-    
-    public int getHaarniskanKetteryys(){
+
+    public int getHaarniskanKetteryys() {
         return this.haarniskanKetteryys;
     }
-    
-    public int getHaarniskanKestavyys(){
+
+    public int getHaarniskanKestavyys() {
         return this.haarniskanKestavyys;
     }
-    
 }

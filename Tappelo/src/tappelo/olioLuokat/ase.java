@@ -11,6 +11,10 @@ package tappelo.olioLuokat;
 public class ase {
     private String aseenNimi;
     
+    public ase(String annettuNimi){
+        this.aseenNimi = annettuNimi;
+    }
+    
     public String getAseenNimi(){
         return aseenNimi;
     }
