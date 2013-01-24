@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tappelo.olioLuokat;
+package olioLuokat;
 
 /**
  *
@@ -22,8 +22,8 @@ public class hahmo {
         this.hahmonRotu = hahmonRotu;
         this.hahmonHaarniska = hahmonHaarniska;
         this.hahmonAse = hahmonAse;
-        this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys + this.hahmonHaarniska.getHaarniskanKetteryys;
-        this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys + this.hahmonHaarniska.getHaarniskanKestavyys;
+        this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys() + this.hahmonHaarniska.getHaarniskanKetteryys();
+        this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();
     }
 
     public String getHahmonNimi() {
@@ -38,16 +38,20 @@ public class hahmo {
         return this.hahmonKestavyys;
     }
 
-    public void osuma(int i) {
-        this.hahmonKestavyys = this.hahmonKestavyys - i;
+    public void osuma(int kestavyysVahinko) {
+        this.hahmonKestavyys = this.hahmonKestavyys - kestavyysVahinko;
     }
 
     public String getHahmonRotu() {
-        return this.hahmonRotu.getRodunNimi;
+        return this.hahmonRotu.getRodunNimi();
     }
 
     public String getHahmonAse() {
-        return this.hahmonAse.getAseenNimi;
+        return this.hahmonAse.getAseenNimi();
+    }
+    
+    public String getHahmonAseenLuokka() {
+        return this.hahmonAse.getAseenLuokka();
     }
 
     public void setHahmonAse(ase uusiAse) {
@@ -55,12 +59,12 @@ public class hahmo {
     }
 
     public String getHahmonHaarniska() {
-        return this.hahmonHaarniska.getHaarniskanNimi;
+        return this.hahmonHaarniska.getHaarniskanNimi();
     }
 
     public void setHahmonHaarniska(haarniska uusiHaarniska) {
         this.hahmonHaarniska = uusiHaarniska;
-        this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys + this.hahmonHaarniska.getHaarniskanKetteryys;
-        this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys + this.hahmonHaarniska.getHaarniskanKestavyys;
+        this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys() + this.hahmonHaarniska.getHaarniskanKetteryys();
+        this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();
     }
 }

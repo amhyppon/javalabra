@@ -9,38 +9,42 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import tappelo.olioLuokat.ase;
+import olioLuokat.ase;
 
 /**
  *
  * @author Hyppönen
  */
 public class aseJUnitTest {
-    
+
     public aseJUnitTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
 
     @Test
     public void toimikoKonstruktoriOikein() {
-        String testiAseenAnnettuNimi = "Aseen testinimi";
-        ase testiAse = new ase(testiAseenAnnettuNimi);
         
+        String testiAseenAnnettuNimi = "Aseen testinimi";
+        String testiAseenAnnettuLuokka = "Aseen testiluokka";
+        
+        ase testiAse = new ase(testiAseenAnnettuNimi, testiAseenAnnettuLuokka);
+
         assertEquals(testiAseenAnnettuNimi, testiAse.getAseenNimi());
+        assertEquals(testiAseenAnnettuLuokka, testiAse.getAseenLuokka());
     }
 }

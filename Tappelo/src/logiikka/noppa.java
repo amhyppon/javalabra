@@ -11,11 +11,12 @@ import java.util.Random;
  * @author Hyppönen
  */
 public class noppa {
-    public static boolean heitaNoppaa(int i) {
+
+    public static boolean heitaNoppaa(int heittojenMaara) {
         Random rand = new Random();
         boolean onkoKutosta = false;
 
-        for (int j = 0; j < i; j++) {
+        for (int j = 0; j < heittojenMaara; j++) {
             int pick = rand.nextInt(6) + 1;
 
             if (pick == 6) {
