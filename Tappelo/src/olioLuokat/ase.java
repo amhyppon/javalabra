@@ -13,6 +13,13 @@ public class ase {
     private String aseenNimi;
     private String aseenLuokka;
 
+    /**
+     * Ase olion ase luokkaa käytetään hyökkäykseen liittyvissä toiminnoissa
+     * määräämään erilaisia todennäköisyyksiä.
+     *
+     * @param annettuNimi
+     * @param annettuAseluokka
+     */
     public ase(String annettuNimi, String annettuAseluokka) {
         this.aseenNimi = annettuNimi;
         this.aseenLuokka = annettuAseluokka;
@@ -21,7 +28,7 @@ public class ase {
     public String getAseenNimi() {
         return aseenNimi;
     }
-    
+
     public String getAseenLuokka() {
         return aseenLuokka;
     }

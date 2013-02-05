@@ -12,17 +12,13 @@ import olioLuokat.*;
  */
 public class toiminto {
 
-    /*
-     public void vaistaminen(hahmo toimivaHahmo, hahmo kohdeHahmo) {
-    
-     if(noppa.heitaNoppaa(toimivaHahmo.getHahmonKetteryys() + 3)){
-     if()
-     } else {
-            
-     }
-            
-    
-     } */
+    /**
+     * Metodi mikäli väistäminen onnistuu yrittää väistäjä vastaiskua.
+     * Vastaiskun onnistumiseen vaikuttaa onko väistäjällä miekka vai ei.
+     *
+     * @param annettuToimivaHahmo
+     * @param annettuKohdeHahmo
+     */
     public static void vastaisku(hahmo annettuToimivaHahmo, hahmo annettuKohdeHahmo) {
 
         hahmo toimivaHahmo = annettuToimivaHahmo;
@@ -40,6 +36,13 @@ public class toiminto {
         }
     }
 
+    /**
+     * Metodi mikäli pelaaja tai tietokone päättää väistää hyökkäyksen heitetään
+     * noppaa jonka onnistumiseen vaikuttaa väistävän hahmon ketteryys.
+     *
+     * @param annettuHyokkaavaHahmo
+     * @param annettuVaistavaHahmo
+     */
     public static void vaistaminen(hahmo annettuHyokkaavaHahmo, hahmo annettuVaistavaHahmo) {
 
         hahmo hyokkaavaHahmo = annettuHyokkaavaHahmo;
@@ -53,6 +56,13 @@ public class toiminto {
 
     }
 
+    /**
+     * Metodi mikäli pelaaja tai tietokone päättää torjua hykkäyksen heitetään
+     * nopaa jonka onnistumiseen vaikuttaa hyökkävään hahmon ase.
+     *
+     * @param annettuHyokkaavaHahmo
+     * @param annettuTorjuvaHahmo
+     */
     public static void torjuminen(hahmo annettuHyokkaavaHahmo, hahmo annettuTorjuvaHahmo) {
 
         hahmo hyokkaavaHahmo = annettuHyokkaavaHahmo;
@@ -69,6 +79,14 @@ public class toiminto {
         }
     }
 
+    /**
+     * Metodi mikäli hyökkäyksen torjuminen tai väistämien epäonnistuu tai
+     * vastaisku onnistuu. Mikäli osuvalla hahmolla on kirves käytössä heitetään
+     * ylimääräinen noppa lisä vauriosta.
+     *
+     * @param annettuOsuvaHahmo
+     * @param annettuKohdeHahmo
+     */
     public static void osuvaIsku(hahmo annettuOsuvaHahmo, hahmo annettuKohdeHahmo) {
 
         hahmo osuvaHahmo = annettuOsuvaHahmo;

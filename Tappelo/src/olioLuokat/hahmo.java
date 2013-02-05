@@ -17,6 +17,15 @@ public class hahmo {
     private haarniska hahmonHaarniska;
     private ase hahmonAse;
 
+    /**
+     * Hahmolla on muuttumaton nimi ja rotu. Hahmon kestävyys ja ketteryys
+     * määräytyy hahmon rodun ja haarniskan avulla.
+     *
+     * @param nimi
+     * @param hahmonRotu
+     * @param hahmonHaarniska
+     * @param hahmonAse
+     */
     public hahmo(String nimi, rotu hahmonRotu, haarniska hahmonHaarniska, ase hahmonAse) {
         this.hahmonNimi = nimi;
         this.hahmonRotu = hahmonRotu;
@@ -38,8 +47,21 @@ public class hahmo {
         return this.hahmonKestavyys;
     }
 
+    /**
+     * Metodi hahmon vaurioittamiseen, tarkoituksena, että ottelu loppuu kun
+     * hahmolla on jäljellä 0 kestävyyttä.
+     *
+     * @param kestavyysVahinko haluttu kestävyys vaurion määrä, yleensä 1
+     */
     public void osuma(int kestavyysVahinko) {
         this.hahmonKestavyys = this.hahmonKestavyys - kestavyysVahinko;
+    }
+
+    /**
+     * Metodi hahmon kestävyyden palauttamiseen ottelun loputtua.
+     */
+    public void palautaKestävyys() {
+        this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();
     }
 
     public String getHahmonRotu() {
@@ -49,7 +71,7 @@ public class hahmo {
     public String getHahmonAse() {
         return this.hahmonAse.getAseenNimi();
     }
-    
+
     public String getHahmonAseenLuokka() {
         return this.hahmonAse.getAseenLuokka();
     }

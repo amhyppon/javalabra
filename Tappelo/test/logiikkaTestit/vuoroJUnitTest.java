@@ -61,10 +61,10 @@ public class vuoroJUnitTest {
     @Test
     public void testataanEnsimmaistaVuoroaJaVuoronVaihtoa() {
     
-        vuoro.ensimmainenVuoro(testiHahmo1, testiHahmo2);
+        vuoro.vuoro(testiHahmo1, testiHahmo2);
         
         vuoro.seuraavaVuoro();
         
-        assertEquals(testiHahmo2, vuoro.kenenVuoro());
+        assertEquals(testiHahmo2, vuoro.getVuorossaOlevaHahmo());
     }
 }

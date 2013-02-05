@@ -14,6 +14,14 @@ public class rotu {
     private int rodunKetteryys;
     private int rodunKestavyys;
 
+    /**
+     * Rodun ketteryyttä ja kestävyyttä käytetään hahmon ketteryyden ja
+     * kestävyyden laskemiseen.
+     *
+     * @param annettuNimi
+     * @param annettuKetteryys
+     * @param annettuKestavyys
+     */
     public rotu(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
         this.rodunNimi = annettuNimi;
         this.rodunKetteryys = annettuKetteryys;

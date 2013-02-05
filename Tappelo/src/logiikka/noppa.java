@@ -12,17 +12,42 @@ import java.util.Random;
  */
 public class noppa {
 
+    static Random random = new Random();
+
+    /**
+     * Metodilla heitetään noppaa kuutosen toivossa.
+     *
+     * @param heittojenMaara haluttu heittojen määrä, vaikuttaa
+     * todennäköisyyteen saada kutonen
+     * @return palautetaan boolean tuliko heitoista kuutonen
+     */
     public static boolean heitaNoppaa(int heittojenMaara) {
-        Random rand = new Random();
+
         boolean onkoKutosta = false;
 
         for (int j = 0; j < heittojenMaara; j++) {
-            int pick = rand.nextInt(6) + 1;
+            int heitto = random.nextInt(6) + 1;
 
-            if (pick == 6) {
+            if (heitto == 6) {
                 onkoKutosta = true;
             }
         }
         return onkoKutosta;
+    }
+
+    /**
+     * Metodi arpoo numeron halutulta väliltä 1-suurinNumero. Käytetään
+     * valitsemaan tietokoneelle.
+     *
+     * @param suurinNumero määrää halutun arvovälin
+     * @return palauttaa arvotun numeron arvon
+     */
+    public static int arvoNumero(int suurinNumero) {
+
+        int arvottuNumero;
+
+        arvottuNumero = random.nextInt(suurinNumero) + 1;
+
+        return arvottuNumero;
     }
 }

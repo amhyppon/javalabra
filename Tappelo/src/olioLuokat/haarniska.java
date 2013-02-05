@@ -14,6 +14,14 @@ public class haarniska {
     private int haarniskanKetteryys;
     private int haarniskanKestavyys;
 
+    /**
+     * Haarniska lisää hahmon kestävyyttä, mutta raskaampi haarniska vähentää
+     * myös ketteryyttä.
+     *
+     * @param annettuNimi
+     * @param annettuKetteryys
+     * @param annettuKestavyys
+     */
     public haarniska(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
         this.haarniskanNimi = annettuNimi;
         this.haarniskanKetteryys = annettuKetteryys;
