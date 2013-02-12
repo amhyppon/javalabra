@@ -8,6 +8,6 @@
 24.1.2013 	4h 	ohjelmointia ja deadline 2 wrapup
 24.1.2013 	1h 	ohjausta
 25.1.2013 	1h 	ohjelmointia
-29.1.2013 	4h 	ohjelmointia
-5.2.2013 	5h 	ohjelmointia ja deadline 3 
-12.2.2013 	5h 	ohjelmointia ja deadline 4
+29.1.2013 	4h 	ohjelmointia ja deadline 3
+5.2.2013 	5h 	ohjelmointia ja deadline 4 
+12.2.2013 	7h 	ohjelmointia ja deadline 5
