@@ -16,11 +16,11 @@ public class vuoro {
     private static hahmo vuoroaOdottavaHahmo;
 
     /**
-     * Vuoro olio pitää kirjaa kenen hahmo milloinki on.
+     * Vuoro olio pitää kirjaa minkä hahmon vuoro milloinki on.
      * @param annettuPelaajanHahmo
      * @param annettuVastustajanHahmo 
      */
-    public static void vuoro(hahmo annettuPelaajanHahmo, hahmo annettuVastustajanHahmo) {
+    public vuoro(hahmo annettuPelaajanHahmo, hahmo annettuVastustajanHahmo) {
 
         vuorossaOlevaHahmo = annettuPelaajanHahmo;
         vuoroaOdottavaHahmo = annettuVastustajanHahmo;

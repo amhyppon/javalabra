@@ -17,8 +17,11 @@ public class Tappelo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
         System.out.println("Tervetuloa pelaamaan Tappeloa!");
         
+        pelinKulku.pelinAloitus();
+        
+        pelinKulku.vuoroRotaatio();
     }
 }

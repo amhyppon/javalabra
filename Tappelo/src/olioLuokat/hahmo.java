@@ -16,6 +16,7 @@ public class hahmo {
     private rotu hahmonRotu;
     private haarniska hahmonHaarniska;
     private ase hahmonAse;
+    private int voitot = 0;
 
     /**
      * Hahmolla on muuttumaton nimi ja rotu. Hahmon kestävyys ja ketteryys
@@ -64,8 +65,12 @@ public class hahmo {
         this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();
     }
 
-    public String getHahmonRotu() {
+    public String getHahmonRodunNimi() {
         return this.hahmonRotu.getRodunNimi();
+    }
+    
+    public rotu getHahmonRotu() {
+        return this.hahmonRotu;
     }
 
     public String getHahmonAse() {
@@ -88,5 +93,13 @@ public class hahmo {
         this.hahmonHaarniska = uusiHaarniska;
         this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys() + this.hahmonHaarniska.getHaarniskanKetteryys();
         this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();
+    }
+    
+    public void hahmolleVoittoPiste() {
+        voitot++;
+    }
+    
+    public int getHahmonVoitot() {
+        return voitot;
     }
 }

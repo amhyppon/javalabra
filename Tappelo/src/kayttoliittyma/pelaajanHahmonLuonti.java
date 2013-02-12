@@ -41,7 +41,7 @@ public class pelaajanHahmonLuonti {
 
         String pelaajanHahmonNimi = lukija.nextLine();
 
-        if (pelaajanHahmonNimi == "") {
+        if (pelaajanHahmonNimi == "" || pelaajanHahmonNimi == "Vastustajan hahmo") {
             pelaajanHahmonNimi = "Pelaajan hahmo";
         }
 

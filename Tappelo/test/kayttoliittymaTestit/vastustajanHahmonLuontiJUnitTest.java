@@ -45,7 +45,7 @@ public class vastustajanHahmonLuontiJUnitTest {
         hahmo testiVastustajanHahmo = vastustajanHahmonLuonti.vastustajanHahmonLuonti();
 
         System.out.println(testiVastustajanHahmo.getHahmonNimi());
-        System.out.println(testiVastustajanHahmo.getHahmonRotu());
+        System.out.println(testiVastustajanHahmo.getHahmonRodunNimi());
         System.out.println(testiVastustajanHahmo.getHahmonHaarniska());
         System.out.println(testiVastustajanHahmo.getHahmonAse());
     }

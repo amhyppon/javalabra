@@ -101,4 +101,44 @@ public class toiminto {
         kohdeHahmo.osuma(1);
 
     }
+
+    /**
+     * Metodissa loukkaava hahmo pyrkii loukkaamaan vastustajansa rotua. Mikäli
+     * rotu kohtainen loukkaus onnistuu saa loukkaava hahmo helpohkon
+     * hyökkäyksen, jonka epäonnistuessa vastustaja saa vaikean hyökkäyksen.
+     * Mikäli loukkaus epäonnistuu loukkauksensa valinnassa saa loukkaaja
+     * kumminkin yrittää keskivaikeaa hyökkäystä, jonka epäonnistuessa myös
+     * vastustaja saa yrittää keskivaikeaa hyökkäystä.
+     *
+     * @param loukattavaRotu
+     * @param loukkaavaHahmo
+     * @param loukattavaHahmo
+     */
+    public static void loukkaaVastustajaa(rotu loukattavaRotu, hahmo loukkaavaHahmo, hahmo loukattavaHahmo) {
+
+        if (loukattavaRotu.getRodunNimi() == loukattavaHahmo.getHahmonRodunNimi()) {
+
+            if (noppa.heitaNoppaa(4)) {
+                osuvaIsku(loukkaavaHahmo, loukattavaHahmo);
+            } else {
+
+                if (noppa.heitaNoppaa(1)) {
+                    osuvaIsku(loukattavaHahmo, loukkaavaHahmo);
+                }
+            }
+
+        } else {
+
+            if (noppa.heitaNoppaa(2)) {
+                osuvaIsku(loukkaavaHahmo, loukattavaHahmo);
+            } else {
+
+                if (noppa.heitaNoppaa(2)) {
+                    osuvaIsku(loukattavaHahmo, loukkaavaHahmo);
+                }
+            }
+
+        }
+
+    }
 }

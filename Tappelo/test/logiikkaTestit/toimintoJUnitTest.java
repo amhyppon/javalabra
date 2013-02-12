@@ -109,4 +109,25 @@ public class toimintoJUnitTest {
 
         System.out.println("kohde hahmon kestävyys kirvestestissä: " + testiHahmo1.getHahmonKestavyys() + "/4");
     }
+
+    @Test
+    public void testataanLoukataOikeaaRotua() {
+        toiminto.loukkaaVastustajaa(testiRotu1, testiHahmo1, testiHahmo2);
+        
+        System.out.println("loukkaavan hahmon kestävyys oikea rotu loukkaustestissä: " + testiHahmo1.getHahmonKestavyys() + "/4");
+        System.out.println("loukattavan hahmon kestävyys oikea rotu loukkaustestissä: " + testiHahmo2.getHahmonKestavyys() + "/4");
+    }
+    
+    @Test
+    public void testataanLoukataVäärääRotua() {
+        
+        rotu vaaraRotu = new rotu("Väärä rotu", 2, 2);
+        
+        toiminto.loukkaaVastustajaa(vaaraRotu, testiHahmo1, testiHahmo2);
+        
+        System.out.println("loukkaavan hahmon kestävyys väärän rotu loukkaustestissä: " + testiHahmo1.getHahmonKestavyys() + "/4");
+        System.out.println("loukattavan hahmon kestävyys väärän rotu loukkaustestissä: " + testiHahmo2.getHahmonKestavyys() + "/4");
+    }
+
+
 }

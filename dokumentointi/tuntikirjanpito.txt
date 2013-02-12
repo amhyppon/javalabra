@@ -1,11 +1,13 @@
-15.1.2013, 1h aloitusluento
-15.1.2013 2h gitin alustus ja deadline 1 hässäkät
-18.1.2013 2h kertausta
-21.1.2013 3h kertausta
-22.1.2013 5h ohjelmointia ja kertausta
-22.1.2013 1h ohjausta
-23.1.2013 2h ohjelmointia
-24.1.2013 4h ohjelmointia ja deadline 2 wrapup
-24.1.2013 1h ohjausta
-25.1.2013 1h ohjelmointia
-29.1.2013 4h ohjelmointia
+15.1.2013 	1h 	aloitusluento
+15.1.2013 	2h 	gitin alustus ja deadline 1 hässäkät
+18.1.2013 	2h 	kertausta
+21.1.2013 	3h 	kertausta
+22.1.2013 	5h 	ohjelmointia ja kertausta
+22.1.2013 	1h 	ohjausta
+23.1.2013 	2h 	ohjelmointia
+24.1.2013 	4h 	ohjelmointia ja deadline 2 wrapup
+24.1.2013 	1h 	ohjausta
+25.1.2013 	1h 	ohjelmointia
+29.1.2013 	4h 	ohjelmointia
+5.2.2013 	5h 	ohjelmointia ja deadline 3 
+12.2.2013 	5h 	ohjelmointia ja deadline 4

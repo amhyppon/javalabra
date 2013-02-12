@@ -55,7 +55,7 @@ public class hahmoJUnitTest {
     public void testataanHahmonKonstruktoria() {
         
         assertEquals("testiHahmonNimi", testiHahmo.getHahmonNimi());
-        assertEquals("testiRodunNimi", testiHahmo.getHahmonRotu());
+        assertEquals("testiRodunNimi", testiHahmo.getHahmonRodunNimi());
         assertEquals("testiAseenNimi", testiHahmo.getHahmonAse());
         assertEquals("testiHaarniskanNimi", testiHahmo.getHahmonHaarniska());
         assertEquals(1, testiHahmo.getHahmonKetteryys());

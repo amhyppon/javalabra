@@ -29,6 +29,8 @@ public class vuoroJUnitTest {
     haarniska testiHaarniska2;
     hahmo testiHahmo2;
     
+    vuoro testiVuoro;
+    
     public vuoroJUnitTest() {
     }
     
@@ -61,10 +63,12 @@ public class vuoroJUnitTest {
     @Test
     public void testataanEnsimmaistaVuoroaJaVuoronVaihtoa() {
     
-        vuoro.vuoro(testiHahmo1, testiHahmo2);
+        testiVuoro = new vuoro(testiHahmo1, testiHahmo2);
+        
+        assertEquals(testiHahmo1, testiVuoro.getVuorossaOlevaHahmo());
         
         vuoro.seuraavaVuoro();
         
-        assertEquals(testiHahmo2, vuoro.getVuorossaOlevaHahmo());
+        assertEquals(testiHahmo1, testiVuoro.getVuoroaOdottavaHahmo());
     }
 }
