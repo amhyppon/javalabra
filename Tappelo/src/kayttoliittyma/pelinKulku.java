@@ -31,6 +31,10 @@ public class pelinKulku {
         tamanhetkinenVuoro = new vuoro(pelaajanHahmo, vastustajanHahmo);
     }
 
+    /**
+     * Nimensä mukaisesti vastaa vuorojen etenemisestä ja mitä vuorolla
+     * tapahtuu. While loopin if-lauseet määrittävät kumman hahmon vuoro on.
+     */
     public static void vuoroRotaatio() {
 
         Scanner lukija = new Scanner(System.in);

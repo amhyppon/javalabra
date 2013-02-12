@@ -6,7 +6,7 @@ package olioVarasto;
 import olioLuokat.*;
 
 /**
- *
+ * Haarniska varastoa käytetään luomaan haarniskoja jotka palautetaan returneilla.
  * @author Hyppönen
  */
 public class haarniskaVarasto {

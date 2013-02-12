@@ -17,8 +17,9 @@ public class vuoro {
 
     /**
      * Vuoro olio pitää kirjaa minkä hahmon vuoro milloinki on.
+     *
      * @param annettuPelaajanHahmo
-     * @param annettuVastustajanHahmo 
+     * @param annettuVastustajanHahmo
      */
     public vuoro(hahmo annettuPelaajanHahmo, hahmo annettuVastustajanHahmo) {
 
@@ -26,9 +27,11 @@ public class vuoro {
         vuoroaOdottavaHahmo = annettuVastustajanHahmo;
 
     }
-/**
- * Metodi vaihtaa vuorossa olevaa hahmoa.
- */
+
+    /**
+     * Metodi vaihtaa vuorossa olevaa hahmoa. Käytettäväksi vuoron lopussa
+     * hahmon toimittua.
+     */
     public static void seuraavaVuoro() {
 
         hahmo valiaikainenHahmoPaikka = vuorossaOlevaHahmo;
@@ -39,7 +42,7 @@ public class vuoro {
     public static hahmo getVuorossaOlevaHahmo() {
         return vuorossaOlevaHahmo;
     }
-    
+
     public static hahmo getVuoroaOdottavaHahmo() {
         return vuoroaOdottavaHahmo;
     }

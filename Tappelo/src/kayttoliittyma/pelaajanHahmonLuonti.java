@@ -16,6 +16,12 @@ public class pelaajanHahmonLuonti {
 
     static Scanner lukija = new Scanner(System.in);
 
+    /**
+     * Luokalla rakennetaan pelaajalle hahmo kysymällä tältä listattuja
+     * valintoja.
+     *
+     * @return palauttaa käyttäjän muokkaaman hahmon
+     */
     public static hahmo pelaajanHahmonLuonti() {
 
         hahmo pelaajanHahmo;
@@ -35,6 +41,13 @@ public class pelaajanHahmonLuonti {
 
     }
 
+    /**
+     * Kysytään käyttäjältä hahmon nimeä. Mikäli käyttäjä ei anna nimeä tai
+     * yrittää nimetä hahmon nimellä "Vastustajan hahmo" asetetaan nimeksi
+     * "Pelaajan hahmo".
+     *
+     * @return palauttaa valitun nimen
+     */
     public static String kysyPelaajanHahmonNimea() {
 
         System.out.println("Anna hahmosi nimi:");
@@ -48,6 +61,12 @@ public class pelaajanHahmonLuonti {
         return pelaajanHahmonNimi;
     }
 
+    /**
+     * Pyydetään käyttäjää valitsemaan hahmon rotu listasta. Tyhjä valinta
+     * lasketaan valinnaksi 1.
+     *
+     * @return palautetaan valittu rotu
+     */
     public static rotu kysyPelaajanHahmonRotua() {
 
         String syotettyValinta = "ei valittu";
@@ -66,7 +85,7 @@ public class pelaajanHahmonLuonti {
                 System.out.println("Valintasi oli virheellinen, tarkista antamasi valinta!");
             }
 
-            if (syotettyValinta == "1") {
+            if (syotettyValinta == "1" || syotettyValinta == "") {
                 System.out.println("Valitsit hahmosi roduksi ihmisen");
             }
 
@@ -86,6 +105,12 @@ public class pelaajanHahmonLuonti {
 
     }
 
+    /**
+     * Pyydetään käyttäjää valitsemaan hahmon ase listasta. Tyhjä valinta
+     * lasketaan valinnaksi 1.
+     *
+     * @return palautetaan valittu ase
+     */
     public static ase kysyPelaajanHahmonAsetta() {
 
         String syotettyValinta = "ei valittu";
@@ -104,7 +129,7 @@ public class pelaajanHahmonLuonti {
                 System.out.println("Valintasi oli virheellinen, tarkista antamasi valinta!");
             }
 
-            if (syotettyValinta == "1") {
+            if (syotettyValinta == "1" || syotettyValinta == "") {
                 System.out.println("Valitsit hahmosi aseeksi miekan");
             }
 
@@ -124,6 +149,12 @@ public class pelaajanHahmonLuonti {
 
     }
 
+    /**
+     * Pyydetään käyttäjää valitsemaan hahmon haarniska listasta. Tyhjä valinta
+     * lasketaan valinnaksi 1.
+     *
+     * @return palautetaan valittu haarniska
+     */
     public static haarniska kysyPelaajanHahmonHaarniskaa() {
 
         String syotettyValinta = "ei valittu";
@@ -141,7 +172,7 @@ public class pelaajanHahmonLuonti {
                 System.out.println("Valintasi oli virheellinen, tarkista antamasi valinta!");
             }
 
-            if (syotettyValinta == "1") {
+            if (syotettyValinta == "1" || syotettyValinta == "") {
                 System.out.println("Valitsit hahmosi haarniskaksi kevyt haarniskan");
             }
 

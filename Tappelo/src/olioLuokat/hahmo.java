@@ -20,7 +20,8 @@ public class hahmo {
 
     /**
      * Hahmolla on muuttumaton nimi ja rotu. Hahmon kestävyys ja ketteryys
-     * määräytyy hahmon rodun ja haarniskan avulla.
+     * määräytyy hahmon rodun ja haarniskan avulla. Hahmon voittoja voidaan myös
+     * seurava voitot muttujalla tarvittaessa.
      *
      * @param nimi
      * @param hahmonRotu
@@ -68,7 +69,7 @@ public class hahmo {
     public String getHahmonRodunNimi() {
         return this.hahmonRotu.getRodunNimi();
     }
-    
+
     public rotu getHahmonRotu() {
         return this.hahmonRotu;
     }
@@ -94,11 +95,11 @@ public class hahmo {
         this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys() + this.hahmonHaarniska.getHaarniskanKetteryys();
         this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();
     }
-    
+
     public void hahmolleVoittoPiste() {
         voitot++;
     }
-    
+
     public int getHahmonVoitot() {
         return voitot;
     }

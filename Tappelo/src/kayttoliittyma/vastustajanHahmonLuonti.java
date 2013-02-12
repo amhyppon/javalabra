@@ -17,6 +17,11 @@ public class vastustajanHahmonLuonti {
 
     static Scanner lukija = new Scanner(System.in);
 
+    /**
+     * Luokan perusidea, luodaan arvottu hahmo vastustajaksi.
+     *
+     * @return
+     */
     public static hahmo vastustajanHahmonLuonti() {
 
         hahmo vastustajanHahmo;
@@ -36,6 +41,10 @@ public class vastustajanHahmonLuonti {
 
     }
 
+    /**
+     * Nimeää vastustajan hahmon nimellä "Vastustajan hahmo".
+     * @return palauttaa annetun nimen
+     */
     public static String nimeaVastustajanHahmo() {
 
         String vastustajanHahmonNimi = "Vastustajan hahmo";
@@ -43,6 +52,11 @@ public class vastustajanHahmonLuonti {
         return vastustajanHahmonNimi;
     }
 
+    /**
+     * Metodi arpoo (vastustajan hahmolle) rodun noppa -luokan arvoNumero metodia käyttäen.
+     * @return palauttaa arvotun rodun
+     */
+    
     public static rotu arvoVastustajanHahmonRotu() {
 
         int syotettyValinta = noppa.arvoNumero(3);
@@ -59,7 +73,12 @@ public class vastustajanHahmonLuonti {
         return vastustajanHahmonRotu;
 
     }
-
+    
+/**
+ * Metodi arpoo (vastustajan hahmolle) aseen käyttäen noppa -luokan arvoNumero metodia käyttäen.
+ * @return palattaa arvotun aseen
+ */
+    
     public static ase arvoVastustajanHahmonAse() {
 
         int syotettyValinta = noppa.arvoNumero(3);
@@ -77,6 +96,11 @@ public class vastustajanHahmonLuonti {
 
     }
 
+    /**
+     * Metodi arpoo (vastustajan hahmolle) haarniskan käyttäen noppa -luokan arvoNumero metodia käyttäen.
+     * @return palauttaa arvotun haarniskan
+     */
+    
     public static haarniska arvoVastustajanHahmonHaarniska() {
 
         int syotettyValinta = noppa.arvoNumero(2);

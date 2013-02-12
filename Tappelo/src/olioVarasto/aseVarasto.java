@@ -5,7 +5,7 @@
 package olioVarasto;
 import olioLuokat.*;
 /**
- *
+ * Ase varastoa käytetään luomaan aseita jotka palautetaan returneilla.
  * @author Hyppönen
  */
 

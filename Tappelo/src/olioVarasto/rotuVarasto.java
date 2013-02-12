@@ -7,7 +7,7 @@ package olioVarasto;
 import olioLuokat.*;
 
 /**
- *
+ * Rotu varastoa käytetään luomaan rotuja jotka palautetaan returneilla.
  * @author Hyppönen
  */
 public class rotuVarasto {
