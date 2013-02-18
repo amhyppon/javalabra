@@ -103,4 +103,17 @@ public class hahmo {
     public int getHahmonVoitot() {
         return voitot;
     }
+    
+    /**
+     * Palauttaa hahmon nimen, rodun, aseen, haarniskan ja kestävyyden stringinä.
+     * @return 
+     */ 
+    public String toString() {
+        
+        String hahmoKiteytettyna;
+        
+        hahmoKiteytettyna = getHahmonNimi() + ", " + getHahmonRodunNimi() + ", " +  getHahmonAse() + ", " +  getHahmonHaarniska() + ", " + "KST: " + getHahmonKestavyys();
+        
+        return hahmoKiteytettyna;
+    }
 }

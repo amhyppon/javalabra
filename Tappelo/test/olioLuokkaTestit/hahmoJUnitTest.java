@@ -92,4 +92,9 @@ public class hahmoJUnitTest {
         assertEquals("testiAseenNimi2", testiHahmo.getHahmonAse());
         
     }
+    
+    @Test
+    public void testataanToStringia() {
+        System.out.println(testiHahmo.toString());
+    }
 }
