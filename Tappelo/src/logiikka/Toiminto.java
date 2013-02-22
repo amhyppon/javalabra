@@ -10,7 +10,7 @@ import olioLuokat.*;
  *
  * @author Hyppönen
  */
-public class toiminto {
+public class Toiminto {
 
     /**
      * Metodi mikäli väistäminen onnistuu yrittää väistäjä vastaiskua.
@@ -19,19 +19,29 @@ public class toiminto {
      * @param annettuToimivaHahmo
      * @param annettuKohdeHahmo
      */
-    public static void vastaisku(hahmo annettuToimivaHahmo, hahmo annettuKohdeHahmo) {
+    Noppa noppa = new Noppa();
 
-        hahmo toimivaHahmo = annettuToimivaHahmo;
-        hahmo kohdeHahmo = annettuKohdeHahmo;
+    public void vastaisku(Hahmo annettuToimivaHahmo, Hahmo annettuKohdeHahmo) {
+
+        Hahmo toimivaHahmo = annettuToimivaHahmo;
+        Hahmo kohdeHahmo = annettuKohdeHahmo;
 
         if (toimivaHahmo.getHahmonAseenLuokka() == "miekka") {
             if (noppa.heitaNoppaa(3)) {
+
+                System.out.println("Vastaisku onnistuu!");
                 osuvaIsku(toimivaHahmo, kohdeHahmo);
+            } else {
+                System.out.println("Vastaisku ei onnistunut...");
             }
         }
         if (toimivaHahmo.getHahmonAseenLuokka() != "miekka") {
             if (noppa.heitaNoppaa(2)) {
+
+                System.out.println("Vastaisku onnistuu!");
                 osuvaIsku(toimivaHahmo, kohdeHahmo);
+            } else {
+                System.out.println("Vastaisku ei onnistunut...");
             }
         }
     }
@@ -43,15 +53,20 @@ public class toiminto {
      * @param annettuHyokkaavaHahmo
      * @param annettuVaistavaHahmo
      */
-    public static void vaistaminen(hahmo annettuHyokkaavaHahmo, hahmo annettuVaistavaHahmo) {
+    public void vaistaminen(Hahmo annettuHyokkaavaHahmo, Hahmo annettuVaistavaHahmo) {
 
-        hahmo hyokkaavaHahmo = annettuHyokkaavaHahmo;
-        hahmo vaistavaHahmo = annettuVaistavaHahmo;
+        Hahmo hyokkaavaHahmo = annettuHyokkaavaHahmo;
+        Hahmo vaistavaHahmo = annettuVaistavaHahmo;
 
         if (noppa.heitaNoppaa(vaistavaHahmo.getHahmonKetteryys())) {
+
+            System.out.println(vaistavaHahmo.getHahmonNimi() + " onnistuu väistämään iskun ja yrittää vastaiskua!");
             vastaisku(vaistavaHahmo, hyokkaavaHahmo);
         } else {
+
+            System.out.println(vaistavaHahmo.getHahmonNimi() + " ei onnistunu väistämään iskua...");
             osuvaIsku(hyokkaavaHahmo, vaistavaHahmo);
+
         }
 
     }
@@ -63,18 +78,27 @@ public class toiminto {
      * @param annettuHyokkaavaHahmo
      * @param annettuTorjuvaHahmo
      */
-    public static void torjuminen(hahmo annettuHyokkaavaHahmo, hahmo annettuTorjuvaHahmo) {
+    public void torjuminen(Hahmo annettuHyokkaavaHahmo, Hahmo annettuTorjuvaHahmo) {
 
-        hahmo hyokkaavaHahmo = annettuHyokkaavaHahmo;
-        hahmo torjuvaHahmo = annettuTorjuvaHahmo;
+        Hahmo hyokkaavaHahmo = annettuHyokkaavaHahmo;
+        Hahmo torjuvaHahmo = annettuTorjuvaHahmo;
 
         if (hyokkaavaHahmo.getHahmonAseenLuokka() == "moukari") {
             if (noppa.heitaNoppaa(2) == false) {
+
+                System.out.println(torjuvaHahmo.getHahmonNimi() + " epäonnistuu moukarillaan iskun torjumisessa...");
                 osuvaIsku(hyokkaavaHahmo, torjuvaHahmo);
+            } else {
+                System.out.println(torjuvaHahmo.getHahmonNimi() + " onnistuu torjumaan iskun!");
             }
         } else {
             if (noppa.heitaNoppaa(4) == false) {
+
+                System.out.println(torjuvaHahmo.getHahmonNimi() + " epäonnistuu iskun torjumisessa...");
                 osuvaIsku(hyokkaavaHahmo, torjuvaHahmo);
+
+            } else {
+                System.out.println(torjuvaHahmo.getHahmonNimi() + " onnistuu torjumaan iskun!");
             }
         }
     }
@@ -87,19 +111,20 @@ public class toiminto {
      * @param annettuOsuvaHahmo
      * @param annettuKohdeHahmo
      */
-    public static void osuvaIsku(hahmo annettuOsuvaHahmo, hahmo annettuKohdeHahmo) {
+    public void osuvaIsku(Hahmo annettuOsuvaHahmo, Hahmo annettuKohdeHahmo) {
 
-        hahmo osuvaHahmo = annettuOsuvaHahmo;
-        hahmo kohdeHahmo = annettuKohdeHahmo;
+        Hahmo osuvaHahmo = annettuOsuvaHahmo;
+        Hahmo kohdeHahmo = annettuKohdeHahmo;
+
+        kohdeHahmo.osuma(1);
+        System.out.println(osuvaHahmo.getHahmonNimi() + " osuu iskullaan!");
 
         if (osuvaHahmo.getHahmonAseenLuokka() == "kirves") {
             if (noppa.heitaNoppaa(1)) {
                 kohdeHahmo.osuma(1);
+                System.out.println(osuvaHahmo.getHahmonNimi() + " osuu toistamiseen kirveellä!");
             }
         }
-
-        kohdeHahmo.osuma(1);
-
     }
 
     /**
@@ -114,31 +139,56 @@ public class toiminto {
      * @param loukkaavaHahmo
      * @param loukattavaHahmo
      */
-    public static void loukkaaVastustajaa(rotu loukattavaRotu, hahmo loukkaavaHahmo, hahmo loukattavaHahmo) {
+    public void loukkaaVastustajaa(Rotu loukattavaRotu, Hahmo loukkaavaHahmo, Hahmo loukattavaHahmo) {
 
         if (loukattavaRotu.getRodunNimi() == loukattavaHahmo.getHahmonRodunNimi()) {
 
             if (noppa.heitaNoppaa(4)) {
+
+                System.out.println(loukattavaHahmo.getHahmonNimi() + " hyökkää raivoissaan, mutta " + loukkaavaHahmo.getHahmonNimi() + " käyttää tätä hyväkseen iskeäkseen!");
                 osuvaIsku(loukkaavaHahmo, loukattavaHahmo);
             } else {
 
                 if (noppa.heitaNoppaa(1)) {
+
+                    System.out.println(loukattavaHahmo.getHahmonNimi() + " hyökkää raivoissaan ja onnistuu hurjassa hyökkäyksessään!");
                     osuvaIsku(loukattavaHahmo, loukkaavaHahmo);
-                }
-            }
-
-        } else {
-
-            if (noppa.heitaNoppaa(2)) {
-                osuvaIsku(loukkaavaHahmo, loukattavaHahmo);
-            } else {
-
-                if (noppa.heitaNoppaa(2)) {
-                    osuvaIsku(loukattavaHahmo, loukkaavaHahmo);
+                } else {
+                    System.out.println("Vain heinäsirkat vastaavat...");
                 }
             }
 
         }
+
+        if (loukattavaRotu.getRodunNimi() != loukattavaHahmo.getHahmonRodunNimi()) {
+
+            if (noppa.heitaNoppaa(2)) {
+
+                System.out.println(loukattavaHahmo.getHahmonNimi() + " harmistuu loukkauksesta ja hyökkää, mutta " + loukkaavaHahmo.getHahmonNimi() + " onnistuu välttämään hyökkäyksen ja saa iskun lävitse!");
+                osuvaIsku(loukkaavaHahmo, loukattavaHahmo);
+            } else {
+
+                if (noppa.heitaNoppaa(2)) {
+
+
+                    System.out.println(loukattavaHahmo.getHahmonNimi() + " ei ole moksiskaan loukkauksesta ja hyökkää!");
+                    osuvaIsku(loukattavaHahmo, loukkaavaHahmo);
+                } else {
+                    System.out.println("Vain heinäsirkat vastaavat...");
+                }
+            }
+
+        }
+
+    }
+
+    /**
+     * Metodi kutsuttaessa lopettaa ohjelman.
+     */
+    public void poistuPelista() {
+
+        System.out.println("Kiitos pelaamisesta!");
+        System.exit(0);
 
     }
 }

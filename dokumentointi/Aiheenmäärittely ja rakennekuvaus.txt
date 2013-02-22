@@ -1,0 +1,21 @@
+Aihekuvaus
+
+Aihe: Yksinkertainen roolipeli (gladiaattoripeli)
+
+Vuoropohjainen roolipeli jossa keskityt‰‰n kahden hahmon v‰liseen taisteluun. Peliss‰ tekstipohjainen k‰yttˆliittym‰. Peliss‰ luodaan oma hahmo valitsemalla rotu ja varusteet. Taistelu k‰yd‰‰n yht‰ vastustajaa vastaan kerrallaan jonka hahmo on luotu samalla periaatteella kuin pelaajan. Vuorollaan pelaaja/vastustaja valitsee toimintonsa johon toiminnon kohde yritt‰‰ vastata jollain tavalla.
+
+K‰ytt‰j‰t: Pelaaja (ja vastustaja?)
+
+Pelaajan toiminnot: 
+
+Hahmon luonti
+	pelaaja valitsee hahmonsa rodun ja varusteet listasta
+Pelaajan vuoro
+	pelaaja valitsee toiminnon listasta
+Vastustajan vuoro
+	pelaaja valitsee vastatoiminnon listasta
+
+
+Rakennekuvaus
+
+Maini k‰ynnist‰‰ PelinKulku luokan joka luo pelattavat hahmot PelaajanHahmonLuonti ja VastustajanHahmonLuonti luokilla. PelinKulku sen j‰lkeen k‰ytt‰‰ Toiminto luokan toimintoja l‰hett‰en sille hahmo tietoja kenen vuoro onkaan. Toiminnot k‰ytt‰v‰t Noppa luokan random generaattoreita arpoakseen toimintojen tuloksia. Hahmolle on m‰‰ritelty Rotu, Ase ja Haarniska.

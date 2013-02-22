@@ -17,24 +17,26 @@ import olioLuokat.*;
  *
  * @author Hyppönen
  */
-public class toimintoJUnitTest {
+public class ToimintoJUnitTest {
 
-    rotu testiRotu1;
-    ase testiAse1;
-    haarniska testiHaarniska1;
-    hahmo testiHahmo1;
+    Rotu testiRotu1;
+    Ase testiAse1;
+    Haarniska testiHaarniska1;
+    Hahmo testiHahmo1;
     
-    rotu testiRotu2;
-    ase testiAse2;
-    haarniska testiHaarniska2;
-    hahmo testiHahmo2;
+    Rotu testiRotu2;
+    Ase testiAse2;
+    Haarniska testiHaarniska2;
+    Hahmo testiHahmo2;
     
-    rotu testiRotu3;
-    ase testiAse3;
-    haarniska testiHaarniska3;
-    hahmo testiHahmo3;
+    Rotu testiRotu3;
+    Ase testiAse3;
+    Haarniska testiHaarniska3;
+    Hahmo testiHahmo3;
+    
+    Toiminto toiminto = new Toiminto();
 
-    public toimintoJUnitTest() {
+    public ToimintoJUnitTest() {
     }
 
     @BeforeClass
@@ -47,20 +49,20 @@ public class toimintoJUnitTest {
 
     @Before
     public void setUp() {
-        testiRotu1 = new rotu("testiRodunNimi", 2, 2);
-        testiAse1 = new ase("testiMiekka", "miekka");
-        testiHaarniska1 = new haarniska("testiRaskasHaarniskan", -1, 2);
-        testiHahmo1 = new hahmo("testiHahmonNimi", testiRotu1, testiHaarniska1, testiAse1);
+        testiRotu1 = new Rotu("testiRodunNimi", 2, 2);
+        testiAse1 = new Ase("testiMiekka", "miekka");
+        testiHaarniska1 = new Haarniska("testiRaskasHaarniskan", -1, 2);
+        testiHahmo1 = new Hahmo("testiHahmonNimi", testiRotu1, testiHaarniska1, testiAse1);
 
-        testiRotu2 = new rotu("testiRodunNimi", 2, 2);
-        testiAse2 = new ase("testiKirves", "kirves");
-        testiHaarniska2 = new haarniska("testiRaskasHaarniskan", -1, 2);
-        testiHahmo2 = new hahmo("testiHahmonNimi", testiRotu2, testiHaarniska2, testiAse2);
+        testiRotu2 = new Rotu("testiRodunNimi", 2, 2);
+        testiAse2 = new Ase("testiKirves", "kirves");
+        testiHaarniska2 = new Haarniska("testiRaskasHaarniskan", -1, 2);
+        testiHahmo2 = new Hahmo("testiHahmonNimi", testiRotu2, testiHaarniska2, testiAse2);
 
-        testiRotu3 = new rotu("testiRodunNimi", 2, 2);
-        testiAse3 = new ase("testiMoukari", "moukari");
-        testiHaarniska3 = new haarniska("testiRaskasHaarniskan", -1, 2);
-        testiHahmo3 = new hahmo("testiHahmonNimi", testiRotu3, testiHaarniska3, testiAse3);
+        testiRotu3 = new Rotu("testiRodunNimi", 2, 2);
+        testiAse3 = new Ase("testiMoukari", "moukari");
+        testiHaarniska3 = new Haarniska("testiRaskasHaarniskan", -1, 2);
+        testiHahmo3 = new Hahmo("testiHahmonNimi", testiRotu3, testiHaarniska3, testiAse3);
     }
 
     @After
@@ -121,7 +123,7 @@ public class toimintoJUnitTest {
     @Test
     public void testataanLoukataVäärääRotua() {
         
-        rotu vaaraRotu = new rotu("Väärä rotu", 2, 2);
+        Rotu vaaraRotu = new Rotu("Väärä rotu", 2, 2);
         
         toiminto.loukkaaVastustajaa(vaaraRotu, testiHahmo1, testiHahmo2);
         

@@ -1,0 +1,89 @@
+Tappelo manuaali
+
+1. Käyttöohjeet
+2. Toiminnot
+ 2a. Hyökkäys
+ 2b. Väistäminen
+ 2c. Vastaisku
+ 2d. Torjuminen
+ 2e. Loukkaus
+3. Hahmo
+ 3a. Rodut
+ 3b. Aseet
+ 3c. Haarniskat
+
+
+1. Käyttöohjeet
+
+Tappelo on tekstipohjainen vuoropohjainen taistelu/roolipeli "simulaattori".
+
+Peli alkaa pelaajan hahmon luonnilla. Käyttäjältä kysytään listattuja valintoja joihin vastataan numerolla. Itse taistelu käydään valitsemalla joko loukkaus tai hyökkäys johon kohde voi vastata yrityksellä torjua tai väistää isku. Hahmon kestävyyden laskiessa nollaan peli loppuu.
+
+2. Toiminnot
+
+2a. Hyökkäys
+
+Hyökkäyksen kohde voi valita torjumisen tai väistämisen välttääkseen iskun.
+
+2b. Väistäminen
+
+Väistämisessä käytetään väistävän hahmon ketteryyttä. Onnistuessaan väistäjä voi yrittää vastaiskua.
+
+2c. Vastaisku
+
+Onnistunut iskun väistäminen johtaa vastaisku yritykseen joka onnistuessaan antaa väistävän hahmon iskeä väistettävää hahmoa.
+
+2d. Torjuminen
+
+Torjuminen ei riipu torjuvan hahmon ketteryydestä, mutta ei oikeuta onnistuessaan vastaiskuun.
+
+2e. Loukkaus
+
+Loukatessa valitaan loukkaus jolla pyritään osumaan loukattavan hahmon rodun heikkoon kohtaan. Onnistuessaan loukkaus raivostuttaa loukattavan hahmon hyökkäämään miettimättä joka johtaa loukkaajan helppoon iskuun, mutta voi myös epäonnistua ja johtaa loukkattavan onnistuneeseen iskuun loukkaajaa kohtaan. Loukkaus voi myös epäonnistua kokonaan jolloinka ei tapahdu mitään.
+
+3. Hahmo
+
+3a. Rodut
+
+Ihminen
+
+Ketteryys: 2
+Kestävyys: 2
+
+Haltia
+
+Ketteryys: 3
+Kestävyys: 1
+
+Kääpiö
+
+Ketteryys: 1
+Kestävyys: 3
+
+3b. Aseet
+
+Miekka
+
+Miekalla vastaiskun suorittaminen on helpompaa.
+
+Kirves
+
+Osuessaan iskulla on kirveellä mahdollisuus osua uudelleen.
+
+Moukari
+
+Moukarin iskuja on vaikeampi torjua.
+
+3c. Haarniskat
+
+Kevyt haarniska
+
+Kestävyys: 1
+
+Raskas haarniska
+
+Kestävyys: 2
+
+
+
+Aleksi Hyppönen, 2013

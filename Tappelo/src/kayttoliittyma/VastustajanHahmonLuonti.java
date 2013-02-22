@@ -5,7 +5,7 @@
 package kayttoliittyma;
 
 import java.util.Scanner;
-import logiikka.noppa;
+import logiikka.Noppa;
 import olioLuokat.*;
 import olioVarasto.*;
 
@@ -13,29 +13,30 @@ import olioVarasto.*;
  *
  * @author Hyppönen
  */
-public class vastustajanHahmonLuonti {
+public class VastustajanHahmonLuonti {
 
-    static Scanner lukija = new Scanner(System.in);
+    private Scanner lukija = new Scanner(System.in);
+    private Noppa noppa = new Noppa();
 
     /**
      * Luokan perusidea, luodaan arvottu hahmo vastustajaksi.
      *
      * @return
      */
-    public static hahmo vastustajanHahmonLuonti() {
+    public Hahmo vastustajanHahmonLuonti() {
 
-        hahmo vastustajanHahmo;
+        Hahmo vastustajanHahmo;
         String valittuVastustajanHahmonNimi;
-        rotu valittuVastustajanHahmonRotu;
-        ase valittuVastustajanHahmonAse;
-        haarniska valittuVastustajanHahmonHaarniska;
+        Rotu valittuVastustajanHahmonRotu;
+        Ase valittuVastustajanHahmonAse;
+        Haarniska valittuVastustajanHahmonHaarniska;
 
         valittuVastustajanHahmonRotu = arvoVastustajanHahmonRotu();
         valittuVastustajanHahmonAse = arvoVastustajanHahmonAse();
         valittuVastustajanHahmonHaarniska = arvoVastustajanHahmonHaarniska();
         valittuVastustajanHahmonNimi = nimeaVastustajanHahmo();
 
-        vastustajanHahmo = new hahmo(valittuVastustajanHahmonNimi, valittuVastustajanHahmonRotu, valittuVastustajanHahmonHaarniska, valittuVastustajanHahmonAse);
+        vastustajanHahmo = new Hahmo(valittuVastustajanHahmonNimi, valittuVastustajanHahmonRotu, valittuVastustajanHahmonHaarniska, valittuVastustajanHahmonAse);
 
         return vastustajanHahmo;
 
@@ -45,7 +46,7 @@ public class vastustajanHahmonLuonti {
      * Nimeää vastustajan hahmon nimellä "Vastustajan hahmo".
      * @return palauttaa annetun nimen
      */
-    public static String nimeaVastustajanHahmo() {
+    public String nimeaVastustajanHahmo() {
 
         String vastustajanHahmonNimi = "Vastustajan hahmo";
 
@@ -57,17 +58,17 @@ public class vastustajanHahmonLuonti {
      * @return palauttaa arvotun rodun
      */
     
-    public static rotu arvoVastustajanHahmonRotu() {
+    public Rotu arvoVastustajanHahmonRotu() {
 
         int syotettyValinta = noppa.arvoNumero(3);
-        rotu vastustajanHahmonRotu = rotuVarasto.luoIhminen();
+        Rotu vastustajanHahmonRotu = RotuVarasto.luoIhminen();
 
         if (syotettyValinta == 2) {
-            vastustajanHahmonRotu = rotuVarasto.luoHaltia();
+            vastustajanHahmonRotu = RotuVarasto.luoHaltia();
         }
 
         if (syotettyValinta == 3) {
-            vastustajanHahmonRotu = rotuVarasto.luoKaapio();
+            vastustajanHahmonRotu = RotuVarasto.luoKaapio();
         }
 
         return vastustajanHahmonRotu;
@@ -79,17 +80,17 @@ public class vastustajanHahmonLuonti {
  * @return palattaa arvotun aseen
  */
     
-    public static ase arvoVastustajanHahmonAse() {
+    public Ase arvoVastustajanHahmonAse() {
 
         int syotettyValinta = noppa.arvoNumero(3);
-        ase vastustajanHahmonAse = aseVarasto.luoMiekka();
+        Ase vastustajanHahmonAse = AseVarasto.luoMiekka();
 
         if (syotettyValinta == 2) {
-            vastustajanHahmonAse = aseVarasto.luoKirves();
+            vastustajanHahmonAse = AseVarasto.luoKirves();
         }
 
         if (syotettyValinta == 3) {
-            vastustajanHahmonAse = aseVarasto.luoMoukari();
+            vastustajanHahmonAse = AseVarasto.luoMoukari();
         }
 
         return vastustajanHahmonAse;
@@ -101,13 +102,13 @@ public class vastustajanHahmonLuonti {
      * @return palauttaa arvotun haarniskan
      */
     
-    public static haarniska arvoVastustajanHahmonHaarniska() {
+    public Haarniska arvoVastustajanHahmonHaarniska() {
 
         int syotettyValinta = noppa.arvoNumero(2);
-        haarniska vastustajanHahmonHaarniska = haarniskaVarasto.luoKevytHaarniska();
+        Haarniska vastustajanHahmonHaarniska = HaarniskaVarasto.luoKevytHaarniska();
 
         if (syotettyValinta == 2) {
-            vastustajanHahmonHaarniska = haarniskaVarasto.luoRaskasHaarniska();
+            vastustajanHahmonHaarniska = HaarniskaVarasto.luoRaskasHaarniska();
         }
 
         return vastustajanHahmonHaarniska;

@@ -8,7 +8,7 @@ package olioLuokat;
  *
  * @author Hyppönen
  */
-public class rotu {
+public class Rotu {
 
     private String rodunNimi;
     private int rodunKetteryys;
@@ -22,7 +22,7 @@ public class rotu {
      * @param annettuKetteryys
      * @param annettuKestavyys
      */
-    public rotu(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
+    public Rotu(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
         this.rodunNimi = annettuNimi;
         this.rodunKetteryys = annettuKetteryys;
         this.rodunKestavyys = annettuKestavyys;

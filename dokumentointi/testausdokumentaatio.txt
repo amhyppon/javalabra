@@ -1,0 +1,9 @@
+Testausdokumentaatio
+
+Tappelo (Ohjelmoinnin harjoitustyö)
+
+JUnit testaus oli minulle uusi asia, mutta yritin saada tehtyä mahdollisimman kattavan testauksen. Ongelmat kumminkin alkoivat kun pääsin ohjelmani osioon jossa käytetään Noppa -luokan random arvoja. Nämä testasin manuaalisesti tarkistaen tulokset johdonmukaisiksi. En osannut myöskään testata käyttöliittymän osia jossa käyttäjältä kysytään arvoja.
+
+Ohjelmoidessa JUnit testit auttoivat löytämään joitakin bugeja. En saanut ohjelmaa kaatumaan missään vaiheessa ja en törmännyt enää palautus versiossa bugeihin. Yksi "bugi" tosin löytyy hahmon nimeämisestä, mikäli käyttäjä sijoittaa nimeksi hävyttömän pitkän nimen ohjelma hidastuu huomattavasti.
+
+Aleksi Hyppönen, 2013

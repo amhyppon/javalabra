@@ -8,7 +8,7 @@ package olioLuokat;
  *
  * @author Hyppönen
  */
-public class ase {
+public class Ase {
 
     private String aseenNimi;
     private String aseenLuokka;
@@ -20,7 +20,7 @@ public class ase {
      * @param annettuNimi
      * @param annettuAseluokka
      */
-    public ase(String annettuNimi, String annettuAseluokka) {
+    public Ase(String annettuNimi, String annettuAseluokka) {
         this.aseenNimi = annettuNimi;
         this.aseenLuokka = annettuAseluokka;
     }

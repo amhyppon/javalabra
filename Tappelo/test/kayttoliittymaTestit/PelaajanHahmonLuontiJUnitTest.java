@@ -1,25 +1,26 @@
-package olioLuokkaTestit;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+package kayttoliittymaTestit;
 
+import kayttoliittyma.PelaajanHahmonLuonti;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import olioLuokat.ase;
 
 /**
  *
  * @author Hyppönen
  */
-public class aseJUnitTest {
+public class PelaajanHahmonLuontiJUnitTest {
 
-    public aseJUnitTest() {
+    PelaajanHahmonLuonti pelaajanHahmonLuonti = new PelaajanHahmonLuonti();
+
+    public PelaajanHahmonLuontiJUnitTest() {
     }
 
     @BeforeClass
@@ -39,14 +40,8 @@ public class aseJUnitTest {
     }
 
     @Test
-    public void toimikoKonstruktoriOikein() {
-        
-        String testiAseenAnnettuNimi = "Aseen testinimi";
-        String testiAseenAnnettuLuokka = "Aseen testiluokka";
-        
-        ase testiAse = new ase(testiAseenAnnettuNimi, testiAseenAnnettuLuokka);
-
-        assertEquals(testiAseenAnnettuNimi, testiAse.getAseenNimi());
-        assertEquals(testiAseenAnnettuLuokka, testiAse.getAseenLuokka());
+    public void hahmonLuontiTesti() {
+        pelaajanHahmonLuonti.pelaajanHahmonLuonti();
     }
+    //TODO: selvitä miten käyttäjän syötöt voisi testata...
 }

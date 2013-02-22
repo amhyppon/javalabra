@@ -9,15 +9,15 @@ import olioLuokat.*;
  * Haarniska varastoa käytetään luomaan haarniskoja jotka palautetaan returneilla.
  * @author Hyppönen
  */
-public class haarniskaVarasto {
+public class HaarniskaVarasto {
     
-    public static haarniska luoKevytHaarniska() {
-        haarniska kevytHaarniska = new haarniska("Kevyt haarniska", 0, 1);
+    public static Haarniska luoKevytHaarniska() {
+        Haarniska kevytHaarniska = new Haarniska("Kevyt haarniska", 0, 1);
         return kevytHaarniska;
     }
     
-    public static haarniska luoRaskasHaarniska() {
-        haarniska raskasHaarniska = new haarniska("Raskas haarniska", -1, 2);
+    public static Haarniska luoRaskasHaarniska() {
+        Haarniska raskasHaarniska = new Haarniska("Raskas haarniska", -1, 2);
         return raskasHaarniska;
     }
 }

@@ -9,20 +9,20 @@ import olioLuokat.*;
  * @author Hyppönen
  */
 
-public class aseVarasto {
+public class AseVarasto {
     
-    public static ase luoMiekka() {
-        ase miekka = new ase("Miekka", "miekka");
+    public static Ase luoMiekka() {
+        Ase miekka = new Ase("Miekka", "miekka");
         return miekka;
     }
     
-    public static ase luoKirves() {
-        ase kirves = new ase("Kirves", "kirves");
+    public static Ase luoKirves() {
+        Ase kirves = new Ase("Kirves", "kirves");
         return kirves;
     }
     
-    public static ase luoMoukari() {
-        ase moukari = new ase("Moukari", "moukari");
+    public static Ase luoMoukari() {
+        Ase moukari = new Ase("Moukari", "moukari");
         return moukari;
     }
 

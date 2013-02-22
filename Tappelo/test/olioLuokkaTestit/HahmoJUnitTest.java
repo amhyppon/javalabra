@@ -5,10 +5,10 @@ package olioLuokkaTestit;
  * and open the template in the editor.
  */
 
-import olioLuokat.ase;
-import olioLuokat.hahmo;
-import olioLuokat.haarniska;
-import olioLuokat.rotu;
+import olioLuokat.Ase;
+import olioLuokat.Hahmo;
+import olioLuokat.Haarniska;
+import olioLuokat.Rotu;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -20,14 +20,14 @@ import static org.junit.Assert.*;
  *
  * @author Hyppönen
  */
-public class hahmoJUnitTest {
+public class HahmoJUnitTest {
     
-    rotu testiRotu;
-    ase testiAse;
-    haarniska testiHaarniska;
-    hahmo testiHahmo;
+    Rotu testiRotu;
+    Ase testiAse;
+    Haarniska testiHaarniska;
+    Hahmo testiHahmo;
     
-    public hahmoJUnitTest() {
+    public HahmoJUnitTest() {
     }
     
     @BeforeClass
@@ -41,10 +41,10 @@ public class hahmoJUnitTest {
     @Before
     public void setUp() {
         
-        testiRotu = new rotu("testiRodunNimi", 2, 2);
-        testiAse = new ase("testiAseenNimi", "testiAseenLuokka");
-        testiHaarniska = new haarniska("testiHaarniskanNimi", -1, 2);
-        testiHahmo = new hahmo("testiHahmonNimi", testiRotu, testiHaarniska, testiAse);
+        testiRotu = new Rotu("testiRodunNimi", 2, 2);
+        testiAse = new Ase("testiAseenNimi", "testiAseenLuokka");
+        testiHaarniska = new Haarniska("testiHaarniskanNimi", -1, 2);
+        testiHahmo = new Hahmo("testiHahmonNimi", testiRotu, testiHaarniska, testiAse);
     }
     
     @After
@@ -73,7 +73,7 @@ public class hahmoJUnitTest {
     @Test
     public void testataanHaarniskanVaihtoa() {
         
-        haarniska testiHaarniska2 = new haarniska("testiHaarniskanNimi2", 0, 1);
+        Haarniska testiHaarniska2 = new Haarniska("testiHaarniskanNimi2", 0, 1);
         
         testiHahmo.setHahmonHaarniska(testiHaarniska2);
         
@@ -85,7 +85,7 @@ public class hahmoJUnitTest {
     @Test
     public void testataanAseenVaihtoa() {
         
-        ase testiAse2 = new ase("testiAseenNimi2", "testiAseenLuokka2");
+        Ase testiAse2 = new Ase("testiAseenNimi2", "testiAseenLuokka2");
         
         testiHahmo.setHahmonAse(testiAse2);
         

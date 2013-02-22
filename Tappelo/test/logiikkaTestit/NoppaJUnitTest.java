@@ -1,46 +1,56 @@
+package logiikkaTestit;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package kayttoliittymaTestit;
 
-import kayttoliittyma.pelaajanHahmonLuonti;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import logiikka.Noppa;
 
 /**
  *
  * @author Hyppönen
  */
-public class pelaajanHahmonLuontiJUnitTest {
+public class NoppaJUnitTest {
     
-    public pelaajanHahmonLuontiJUnitTest() {
+    Noppa noppa = new Noppa();
+
+    public NoppaJUnitTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
-    }
+        
     
+    }
+
     @After
     public void tearDown() {
     }
 
-    @Test       
-    public void hahmonLuontiTesti() {
-        pelaajanHahmonLuonti.pelaajanHahmonLuonti();
+    @Test
+    public void toimiikoNoppa() {
+
+        System.out.println(noppa.heitaNoppaa(4));
     }
     
-    //TODO: selvitä miten käyttäjän syötöt voisi testata...
+    @Test
+    public void toimiikoArvonta() {
+
+        System.out.println(noppa.arvoNumero(2));
+    }
 }

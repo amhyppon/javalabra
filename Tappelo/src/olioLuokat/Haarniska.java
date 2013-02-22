@@ -8,7 +8,7 @@ package olioLuokat;
  *
  * @author Hyppönen
  */
-public class haarniska {
+public class Haarniska {
 
     private String haarniskanNimi;
     private int haarniskanKetteryys;
@@ -22,7 +22,7 @@ public class haarniska {
      * @param annettuKetteryys
      * @param annettuKestavyys
      */
-    public haarniska(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
+    public Haarniska(String annettuNimi, int annettuKetteryys, int annettuKestavyys) {
         this.haarniskanNimi = annettuNimi;
         this.haarniskanKetteryys = annettuKetteryys;
         this.haarniskanKestavyys = annettuKestavyys;

@@ -7,14 +7,16 @@ package kayttoliittyma;
 import java.util.Scanner;
 import olioLuokat.*;
 import olioVarasto.*;
+import logiikka.*;
 
 /**
  *
  * @author Hyppönen
  */
-public class pelaajanHahmonLuonti {
+public class PelaajanHahmonLuonti {
 
-    static Scanner lukija = new Scanner(System.in);
+    private Scanner lukija = new Scanner(System.in);
+    private Toiminto toiminto = new Toiminto();
 
     /**
      * Luokalla rakennetaan pelaajalle hahmo kysymällä tältä listattuja
@@ -22,20 +24,20 @@ public class pelaajanHahmonLuonti {
      *
      * @return palauttaa käyttäjän muokkaaman hahmon
      */
-    public static hahmo pelaajanHahmonLuonti() {
+    public Hahmo pelaajanHahmonLuonti() {
 
-        hahmo pelaajanHahmo;
+        Hahmo pelaajanHahmo;
         String valittuPelaajanHahmonNimi;
-        rotu valittuPelaajanHahmonRotu;
-        ase valittuPelaajanHahmonAse;
-        haarniska valittuPelaajanHahmonHaarniska;
+        Rotu valittuPelaajanHahmonRotu;
+        Ase valittuPelaajanHahmonAse;
+        Haarniska valittuPelaajanHahmonHaarniska;
 
         valittuPelaajanHahmonRotu = kysyPelaajanHahmonRotua();
         valittuPelaajanHahmonAse = kysyPelaajanHahmonAsetta();
         valittuPelaajanHahmonHaarniska = kysyPelaajanHahmonHaarniskaa();
         valittuPelaajanHahmonNimi = kysyPelaajanHahmonNimea();
 
-        pelaajanHahmo = new hahmo(valittuPelaajanHahmonNimi, valittuPelaajanHahmonRotu, valittuPelaajanHahmonHaarniska, valittuPelaajanHahmonAse);
+        pelaajanHahmo = new Hahmo(valittuPelaajanHahmonNimi, valittuPelaajanHahmonRotu, valittuPelaajanHahmonHaarniska, valittuPelaajanHahmonAse);
 
         return pelaajanHahmo;
 
@@ -48,15 +50,15 @@ public class pelaajanHahmonLuonti {
      *
      * @return palauttaa valitun nimen
      */
-    public static String kysyPelaajanHahmonNimea() {
+    public String kysyPelaajanHahmonNimea() {
 
         System.out.println("Anna hahmosi nimi:");
 
         String pelaajanHahmonNimi = lukija.nextLine();
 
-        if (pelaajanHahmonNimi == "" || pelaajanHahmonNimi == "Vastustajan hahmo") {
+        if (pelaajanHahmonNimi.equals("") || pelaajanHahmonNimi.equals("Vastustajan hahmo")) {
             pelaajanHahmonNimi = "Pelaajan hahmo";
-        }
+        }        
 
         return pelaajanHahmonNimi;
     }
@@ -67,36 +69,45 @@ public class pelaajanHahmonLuonti {
      *
      * @return palautetaan valittu rotu
      */
-    public static rotu kysyPelaajanHahmonRotua() {
+    public Rotu kysyPelaajanHahmonRotua() {
 
         String syotettyValinta = "ei valittu";
-        rotu pelaajanHahmonRotu = rotuVarasto.luoIhminen();
+        Rotu pelaajanHahmonRotu = RotuVarasto.luoIhminen();
+        boolean validiRotuValinta = false;
 
         System.out.println("Valitse hahmosi rotu numerolla:");
         System.out.println("1. Ihminen");
         System.out.println("2. Haltia");
         System.out.println("3. Kääpiö");
+        System.out.println("0. Poistu pelistä");
 
-        while (syotettyValinta == "ei valittu" || syotettyValinta == "1" || syotettyValinta == "2" || syotettyValinta == "3" || syotettyValinta == "") {
+        while (validiRotuValinta == false) {
 
             syotettyValinta = lukija.nextLine();
 
-            if (syotettyValinta != "1" || syotettyValinta != "2" || syotettyValinta != "3" || syotettyValinta != "") {
+            if (!syotettyValinta.equals("1") && !syotettyValinta.equals("2") && !syotettyValinta.equals("3") && !syotettyValinta.equals("") && !syotettyValinta.equals("0")) {
                 System.out.println("Valintasi oli virheellinen, tarkista antamasi valinta!");
             }
 
-            if (syotettyValinta == "1" || syotettyValinta == "") {
+            if (syotettyValinta.equals("1") || syotettyValinta.equals("")) {
                 System.out.println("Valitsit hahmosi roduksi ihmisen");
+                validiRotuValinta = true;
             }
 
-            if (syotettyValinta == "2") {
+            if (syotettyValinta.equals("2")) {
                 System.out.println("Valitsit hahmosi roduksi haltian");
-                pelaajanHahmonRotu = rotuVarasto.luoHaltia();
+                pelaajanHahmonRotu = RotuVarasto.luoHaltia();
+                validiRotuValinta = true;
             }
 
-            if (syotettyValinta == "3") {
+            if (syotettyValinta.equals("3")) {
                 System.out.println("Valitsit hahmosi roduksi kääpiön");
-                pelaajanHahmonRotu = rotuVarasto.luoKaapio();
+                pelaajanHahmonRotu = RotuVarasto.luoKaapio();
+                validiRotuValinta = true;
+            }
+            
+            if (syotettyValinta.equals("0")) {
+                toiminto.poistuPelista();
             }
 
         }
@@ -111,36 +122,45 @@ public class pelaajanHahmonLuonti {
      *
      * @return palautetaan valittu ase
      */
-    public static ase kysyPelaajanHahmonAsetta() {
+    public Ase kysyPelaajanHahmonAsetta() {
 
         String syotettyValinta = "ei valittu";
-        ase pelaajanHahmonAse = aseVarasto.luoMiekka();
+        Ase pelaajanHahmonAse = AseVarasto.luoMiekka();
+        boolean validiAseValinta = false;
 
         System.out.println("Valitse hahmosi ase numerolla:");
         System.out.println("1. Miekka");
         System.out.println("2. Kirves");
         System.out.println("3. Moukari");
+        System.out.println("0. Poistu pelistä");
 
-        while (syotettyValinta == "ei valittu" || syotettyValinta == "1" || syotettyValinta == "2" || syotettyValinta == "3" || syotettyValinta == "") {
+        while (validiAseValinta == false) {
 
             syotettyValinta = lukija.nextLine();
 
-            if (syotettyValinta != "1" || syotettyValinta != "2" || syotettyValinta != "3" || syotettyValinta != "") {
+            if (!syotettyValinta.equals("1") && !syotettyValinta.equals("2") && !syotettyValinta.equals("3") && !syotettyValinta.equals("") && !syotettyValinta.equals("0")) {
                 System.out.println("Valintasi oli virheellinen, tarkista antamasi valinta!");
             }
 
-            if (syotettyValinta == "1" || syotettyValinta == "") {
+            if (syotettyValinta.equals("1") || syotettyValinta.equals("")) {
                 System.out.println("Valitsit hahmosi aseeksi miekan");
+                validiAseValinta = true;
             }
 
-            if (syotettyValinta == "2") {
+            if (syotettyValinta.equals("2")) {
                 System.out.println("Valitsit hahmosi aseeksi kirveen");
-                pelaajanHahmonAse = aseVarasto.luoKirves();
+                pelaajanHahmonAse = AseVarasto.luoKirves();
+                validiAseValinta = true;
             }
 
-            if (syotettyValinta == "3") {
+            if (syotettyValinta.equals("3")) {
                 System.out.println("Valitsit hahmosi aseeksi moukarin");
-                pelaajanHahmonAse = aseVarasto.luoMoukari();
+                pelaajanHahmonAse = AseVarasto.luoMoukari();
+                validiAseValinta = true;
+            }
+            
+            if (syotettyValinta.equals("0")) {
+                toiminto.poistuPelista();
             }
 
         }
@@ -155,30 +175,38 @@ public class pelaajanHahmonLuonti {
      *
      * @return palautetaan valittu haarniska
      */
-    public static haarniska kysyPelaajanHahmonHaarniskaa() {
+    public Haarniska kysyPelaajanHahmonHaarniskaa() {
 
         String syotettyValinta = "ei valittu";
-        haarniska pelaajanHahmonHaarniska = haarniskaVarasto.luoKevytHaarniska();
+        Haarniska pelaajanHahmonHaarniska = HaarniskaVarasto.luoKevytHaarniska();
+        boolean validiHaarniskaValinta = false;
 
         System.out.println("Valitse hahmosi haarniska numerolla:");
         System.out.println("1. Kevyt haarniska");
         System.out.println("2. Raskas haarniska");
+        System.out.println("0. Poistu pelistä");
 
-        while (syotettyValinta == "ei valittu" || syotettyValinta == "1" || syotettyValinta == "2" || syotettyValinta == "") {
+        while (validiHaarniskaValinta == false) {
 
             syotettyValinta = lukija.nextLine();
 
-            if (syotettyValinta != "1" || syotettyValinta != "2" || syotettyValinta != "") {
+            if (!syotettyValinta.equals("1") && !syotettyValinta.equals("2") && !syotettyValinta.equals("") && !syotettyValinta.equals("0")) {
                 System.out.println("Valintasi oli virheellinen, tarkista antamasi valinta!");
             }
 
-            if (syotettyValinta == "1" || syotettyValinta == "") {
+            if (syotettyValinta.equals("1") || syotettyValinta.equals("")) {
                 System.out.println("Valitsit hahmosi haarniskaksi kevyt haarniskan");
+                validiHaarniskaValinta = true;
             }
 
-            if (syotettyValinta == "2") {
+            if (syotettyValinta.equals("2")) {
                 System.out.println("Valitsit hahmosi haarniskaksi raskas haarniskan");
-                pelaajanHahmonHaarniska = haarniskaVarasto.luoRaskasHaarniska();
+                pelaajanHahmonHaarniska = HaarniskaVarasto.luoRaskasHaarniska();
+                validiHaarniskaValinta = true;
+            }
+            
+            if (syotettyValinta.equals("0")) {
+                toiminto.poistuPelista();
             }
 
 

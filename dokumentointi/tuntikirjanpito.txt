@@ -11,3 +11,6 @@
 29.1.2013 	4h 	ohjelmointia ja deadline 3
 5.2.2013 	5h 	ohjelmointia ja deadline 4 
 12.2.2013 	7h 	ohjelmointia ja deadline 5
+18.2.2013	5h	ohjelmointia, viimeistelyä, bugfixausta, demous ja tuurointi
+19.2.2013	2h	bugfixausta
+21.2.2013	7h	bugfixausta, viimeistelyä ja dokumentointia

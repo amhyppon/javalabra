@@ -10,20 +10,20 @@ import olioLuokat.*;
  * Rotu varastoa käytetään luomaan rotuja jotka palautetaan returneilla.
  * @author Hyppönen
  */
-public class rotuVarasto {
+public class RotuVarasto {
 
-    public static rotu luoIhminen() {
-        rotu ihminen = new rotu("Ihminen", 2, 2);
+    public static Rotu luoIhminen() {
+        Rotu ihminen = new Rotu("Ihminen", 2, 2);
         return ihminen;
     }
 
-    public static rotu luoHaltia() {
-        rotu haltia = new rotu("Haltia", 3, 1);
+    public static Rotu luoHaltia() {
+        Rotu haltia = new Rotu("Haltia", 3, 1);
         return haltia;
     }
 
-    public static rotu luoKaapio() {
-        rotu kaapio = new rotu("Kääpiö", 1, 3);
+    public static Rotu luoKaapio() {
+        Rotu kaapio = new Rotu("Kääpiö", 1, 3);
         return kaapio;
     }
 }

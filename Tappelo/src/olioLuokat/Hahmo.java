@@ -8,14 +8,14 @@ package olioLuokat;
  *
  * @author Hyppönen
  */
-public class hahmo {
+public class Hahmo {
 
     private String hahmonNimi;
     private int hahmonKetteryys;
     private int hahmonKestavyys;
-    private rotu hahmonRotu;
-    private haarniska hahmonHaarniska;
-    private ase hahmonAse;
+    private Rotu hahmonRotu;
+    private Haarniska hahmonHaarniska;
+    private Ase hahmonAse;
     private int voitot = 0;
 
     /**
@@ -28,7 +28,7 @@ public class hahmo {
      * @param hahmonHaarniska
      * @param hahmonAse
      */
-    public hahmo(String nimi, rotu hahmonRotu, haarniska hahmonHaarniska, ase hahmonAse) {
+    public Hahmo(String nimi, Rotu hahmonRotu, Haarniska hahmonHaarniska, Ase hahmonAse) {
         this.hahmonNimi = nimi;
         this.hahmonRotu = hahmonRotu;
         this.hahmonHaarniska = hahmonHaarniska;
@@ -62,7 +62,7 @@ public class hahmo {
     /**
      * Metodi hahmon kestävyyden palauttamiseen ottelun loputtua.
      */
-    public void palautaKestävyys() {
+    public void palautaKestavyys() {
         this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();
     }
 
@@ -70,7 +70,7 @@ public class hahmo {
         return this.hahmonRotu.getRodunNimi();
     }
 
-    public rotu getHahmonRotu() {
+    public Rotu getHahmonRotu() {
         return this.hahmonRotu;
     }
 
@@ -82,7 +82,7 @@ public class hahmo {
         return this.hahmonAse.getAseenLuokka();
     }
 
-    public void setHahmonAse(ase uusiAse) {
+    public void setHahmonAse(Ase uusiAse) {
         this.hahmonAse = uusiAse;
     }
 
@@ -90,7 +90,7 @@ public class hahmo {
         return this.hahmonHaarniska.getHaarniskanNimi();
     }
 
-    public void setHahmonHaarniska(haarniska uusiHaarniska) {
+    public void setHahmonHaarniska(Haarniska uusiHaarniska) {
         this.hahmonHaarniska = uusiHaarniska;
         this.hahmonKetteryys = this.hahmonRotu.getRodunKetteryys() + this.hahmonHaarniska.getHaarniskanKetteryys();
         this.hahmonKestavyys = this.hahmonRotu.getRodunKestavyys() + this.hahmonHaarniska.getHaarniskanKestavyys();

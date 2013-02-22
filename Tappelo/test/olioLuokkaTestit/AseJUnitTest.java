@@ -11,15 +11,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import olioLuokat.rotu;
+import olioLuokat.Ase;
 
 /**
  *
  * @author Hyppönen
  */
-public class rotuJUnitTest {
+public class AseJUnitTest {
 
-    public rotuJUnitTest() {
+    public AseJUnitTest() {
     }
 
     @BeforeClass
@@ -40,13 +40,13 @@ public class rotuJUnitTest {
 
     @Test
     public void toimikoKonstruktoriOikein() {
-        String testiRodunAnnettuNimi = "Rodun testinimi";
-        int testiRodunAnnettuKetteryys = 2;
-        int testiRodunAnnettuKestavyys = 2;
-        rotu testiHaarniska = new rotu(testiRodunAnnettuNimi, testiRodunAnnettuKetteryys, testiRodunAnnettuKestavyys);
+        
+        String testiAseenAnnettuNimi = "Aseen testinimi";
+        String testiAseenAnnettuLuokka = "Aseen testiluokka";
+        
+        Ase testiAse = new Ase(testiAseenAnnettuNimi, testiAseenAnnettuLuokka);
 
-        assertEquals(testiRodunAnnettuNimi, testiHaarniska.getRodunNimi());
-        assertEquals(testiRodunAnnettuKetteryys, testiHaarniska.getRodunKetteryys());
-        assertEquals(testiRodunAnnettuKestavyys, testiHaarniska.getRodunKestavyys());
+        assertEquals(testiAseenAnnettuNimi, testiAse.getAseenNimi());
+        assertEquals(testiAseenAnnettuLuokka, testiAse.getAseenLuokka());
     }
 }

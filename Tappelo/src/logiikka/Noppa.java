@@ -10,9 +10,9 @@ import java.util.Random;
  *
  * @author Hyppönen
  */
-public class noppa {
+public class Noppa {
 
-    static Random random = new Random();
+    private Random random = new Random();
 
     /**
      * Metodilla heitetään noppaa kuutosen toivossa.
@@ -21,7 +21,7 @@ public class noppa {
      * todennäköisyyteen saada kutonen
      * @return palautetaan boolean tuliko heitoista kuutonen
      */
-    public static boolean heitaNoppaa(int heittojenMaara) {
+    public boolean heitaNoppaa(int heittojenMaara) {
 
         boolean onkoKutosta = false;
 
@@ -42,7 +42,7 @@ public class noppa {
      * @param suurinNumero määrää halutun arvovälin
      * @return palauttaa arvotun numeron arvon
      */
-    public static int arvoNumero(int suurinNumero) {
+    public int arvoNumero(int suurinNumero) {
 
         int arvottuNumero;
 

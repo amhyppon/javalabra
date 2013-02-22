@@ -10,10 +10,10 @@ import olioLuokat.*;
  *
  * @author Hyppönen
  */
-public class vuoro {
+public class Vuoro {
 
-    private static hahmo vuorossaOlevaHahmo;
-    private static hahmo vuoroaOdottavaHahmo;
+    private static Hahmo vuorossaOlevaHahmo;
+    private static Hahmo vuoroaOdottavaHahmo;
 
     /**
      * Vuoro olio pitää kirjaa minkä hahmon vuoro milloinki on.
@@ -21,7 +21,7 @@ public class vuoro {
      * @param annettuPelaajanHahmo
      * @param annettuVastustajanHahmo
      */
-    public vuoro(hahmo annettuPelaajanHahmo, hahmo annettuVastustajanHahmo) {
+    public Vuoro(Hahmo annettuPelaajanHahmo, Hahmo annettuVastustajanHahmo) {
 
         vuorossaOlevaHahmo = annettuPelaajanHahmo;
         vuoroaOdottavaHahmo = annettuVastustajanHahmo;
@@ -34,16 +34,16 @@ public class vuoro {
      */
     public static void seuraavaVuoro() {
 
-        hahmo valiaikainenHahmoPaikka = vuorossaOlevaHahmo;
+        Hahmo valiaikainenHahmoPaikka = vuorossaOlevaHahmo;
         vuorossaOlevaHahmo = vuoroaOdottavaHahmo;
         vuoroaOdottavaHahmo = valiaikainenHahmoPaikka;
     }
 
-    public static hahmo getVuorossaOlevaHahmo() {
+    public static Hahmo getVuorossaOlevaHahmo() {
         return vuorossaOlevaHahmo;
     }
 
-    public static hahmo getVuoroaOdottavaHahmo() {
+    public static Hahmo getVuoroaOdottavaHahmo() {
         return vuoroaOdottavaHahmo;
     }
 }

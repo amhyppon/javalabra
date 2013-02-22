@@ -18,9 +18,11 @@ import static org.junit.Assert.*;
  *
  * @author Hyppönen
  */
-public class vastustajanHahmonLuontiJUnitTest {
+public class VastustajanHahmonLuontiJUnitTest {
 
-    public vastustajanHahmonLuontiJUnitTest() {
+    VastustajanHahmonLuonti vastustajanHahmonLuonti = new VastustajanHahmonLuonti();
+    
+    public VastustajanHahmonLuontiJUnitTest() {
     }
 
     @BeforeClass
@@ -42,7 +44,7 @@ public class vastustajanHahmonLuontiJUnitTest {
     @Test
     public void testataanVastustajanHahmonLuontia() {
 
-        hahmo testiVastustajanHahmo = vastustajanHahmonLuonti.vastustajanHahmonLuonti();
+        Hahmo testiVastustajanHahmo = vastustajanHahmonLuonti.vastustajanHahmonLuonti();
 
         System.out.println(testiVastustajanHahmo.getHahmonNimi());
         System.out.println(testiVastustajanHahmo.getHahmonRodunNimi());

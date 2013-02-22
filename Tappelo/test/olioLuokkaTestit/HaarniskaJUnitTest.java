@@ -11,15 +11,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import olioLuokat.haarniska;
+import olioLuokat.Haarniska;
 
 /**
  *
  * @author Hyppönen
  */
-public class haarniskaJUnitTest {
+public class HaarniskaJUnitTest {
 
-    public haarniskaJUnitTest() {
+    public HaarniskaJUnitTest() {
     }
 
     @BeforeClass
@@ -43,7 +43,7 @@ public class haarniskaJUnitTest {
         String testiHaarniskanAnnettuNimi = "Haarniskan testinimi";
         int testiHaarniskanAnnettuKetteryys = -1;
         int testiHaarniskanAnnettuKestavyys = 2;
-        haarniska testiHaarniska = new haarniska(testiHaarniskanAnnettuNimi, testiHaarniskanAnnettuKetteryys, testiHaarniskanAnnettuKestavyys);
+        Haarniska testiHaarniska = new Haarniska(testiHaarniskanAnnettuNimi, testiHaarniskanAnnettuKetteryys, testiHaarniskanAnnettuKestavyys);
 
         assertEquals(testiHaarniskanAnnettuNimi, testiHaarniska.getHaarniskanNimi());
         assertEquals(testiHaarniskanAnnettuKetteryys, testiHaarniska.getHaarniskanKetteryys());
